@@ -29,6 +29,7 @@ function CourseForm(props) {
             <option value="2">Scott Allen</option>
           </select>
         </div>
+        {/*  manualy implemented, because we have not created a reusable TextInput */}
         {props.errors.authorId && (
           <div className="alert alert-danger">{props.errors.authorId}</div>
         )}
@@ -52,7 +53,7 @@ CourseForm.propTypes = {
   course: PropTypes.object.isRequired,
   onSubmit: PropTypes.func.isRequired,
   onChange: PropTypes.func.isRequired,
-  errors: PropTypes.object.isRequired
+  errors: PropTypes.object.isRequired,
 };
 
 export default CourseForm;
